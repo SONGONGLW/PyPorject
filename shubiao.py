@@ -31,6 +31,7 @@ def runfunc(num):
 	while logs:
 		kongzhishubiao(x, y)
 		sleep(num)
+
 	
 if __name__ == '__main__':
 	
