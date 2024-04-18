@@ -126,7 +126,8 @@ def send_data(client_socket):
         # strss = CreateRandom()
         strss = generate_fourier_data(3000)
         data = strss.encode()
-        data_length = len(data).to_bytes(2, byteorder='little')
+        data_length = len(data).to_bytes(4, byteorder='little')
+        # print("length", data);
         check = b'\x69'
         frame_tail = b'\x98\x92'
         packet = frame_header + data_length + data + check + frame_tail
